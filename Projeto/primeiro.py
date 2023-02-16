@@ -34,12 +34,8 @@ while True:
         print(f"Limite diário de {LIMITE_SAQUES} saques\nApenas R$:500,00 reais liberados por saque.")
         print(f"Saques efetuados: {numero_de_saques}") 
         saque = float(input("Digite o valor que deseja sacar: "))
-        
-        while saque > limite:
-            print("Operação falhou! O valor informado é acima do limite diário digite novamente quanto deseja sacar.")
-            saque = float(input("Digite o valor que deseja sacar: "))
             
-        while saque <= 0:
+        while saque <= 0 or saque > limite:
             print("Operação falhou! O valor informado é inválido digite novamente um valor válido.")
             saque = float(input("Digite o valor que deseja sacar: "))
             
